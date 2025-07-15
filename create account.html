@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      width: 320px;
+      animation: slideIn 0.8s ease-out;
+      backdrop-filter: blur(10px);
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-sizing: border-box;
+      font-size: 14px;
+      background-color: #f9f9f9;
+    }
+
+    input:focus {
+      border-color: #8ec5fc;
+      outline: none;
+      background-color: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(90deg, #8ec5fc, #e0c3fc);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      margin-top: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .thank-you-box {
+      display: none;
+      text-align: center;
+      color: #4CAF50;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    #form:target .form-box {
+      display: none;
+    }
+
+    #form:target .thank-you-box {
+      display: block;
+    }
+
+    .thank-you-box h2 {
+      color: #4CAF50;
+    }
+
+    .thank-you-box p {
+      margin-top: 10px;
+      color: #333;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container" id="form">
+    <div class="form-box">
+      <h2>Create Account</h2>
+      <form action="#form">
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Create Account</button>
+      </form>
+    </div>
+
+    <div class="thank-you-box">
+      <h2>🎉 Account Created!</h2>
+      <p>Thank you for joining us.</p>
+      <h5>Parmar mit</h5>
+    </div>
+  </div>
+</body>
+</html>
